@@ -6,7 +6,7 @@ SETUP:
   install dependencies
   replace the variable keys:
   1- https://developers.google.com/maps/documentation/geocoding/get-api-key in (app.js:Line 20) with your google map key
-  2- http://openweathermap.org/api in (app.js:Line 55) with your openWeatherMapkey 
+  2- https://openweathermap.org/api in (app.js:Line 55) with your openWeatherMapkey 
   run node server.js
   Open browser on port 3000
 

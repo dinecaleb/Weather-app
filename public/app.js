@@ -70,7 +70,7 @@ function viewWeather(city){
   console.log(city);
     $.ajax({
 
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + "&APPID=41623a15a0cdc370ddff8399326b1ec7",
+      url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + "&APPID=41623a15a0cdc370ddff8399326b1ec7",
       type: "GET",
       dataType: "json",
       success: function(data){
@@ -78,7 +78,7 @@ function viewWeather(city){
         $("#city").text(data.name.toUpperCase() + ", " +data.sys.country.toUpperCase());
         $("#temperature").html(Math.round(data.main.temp) + "&#176;c");
         $("#description").html(data.weather[0].main + " , " + data.weather[0].description);
-        $("#icon").attr("src",'http://openweathermap.org/img/w/' + data.weather[0].icon + ".png");
+        $("#icon").attr("src",'https://openweathermap.org/img/w/' + data.weather[0].icon + ".png");
         }
     })
 
