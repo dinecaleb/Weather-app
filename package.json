@@ -1,0 +1,26 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "a weather app which tells your current location",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinecaleb/Weather-app.git"
+  },
+  "author": "Caleb tony-Enwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinecaleb/Weather-app/issues"
+  },
+  "homepage": "https://github.com/dinecaleb/Weather-app#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "engines":{
+    "node":"6.9.4"
+  }
+}

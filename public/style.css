@@ -1,0 +1,114 @@
+/*reference
+image: http://www.threepullpa.com/317423-blurred-background-grey.html*/
+/*//APPLICANT NAME: CALEB TONY-ENWIN*/
+
+@media only screen and (max-width: 124px){
+    #data-container{ width: 70%; }
+}
+
+
+#headerText {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+#main{
+  background-image: url("city.png");
+  background-size: cover;
+  color: white;
+  margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
+
+#widget{
+  background-color: #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 450px;
+  height:180px;
+  box-shadow:  0 0 20px #000000;
+  border-radius: 1%;
+}
+
+
+
+#data-container {
+  margin-top: 33%;
+  margin-left: -20%;
+  float: inherit;
+    font-family : sans-serif;
+  text-shadow: 0 0 4px #000000;
+}
+
+#city{
+  font-size: 20px;
+  margin-left: 480px;
+  margin-bottom: -70px;
+}
+
+#temperature{
+  font-size: 70px;
+  margin-left: 480px;
+    margin-bottom: -12px;
+}
+
+#description{
+  font-size: 20px;
+  margin-left: 500px;
+}
+
+#hour{
+  font-size: 50px;
+  margin-top: -150px;
+  margin-left: 730px;
+  float: left;
+    color: black;
+}
+
+#minute{
+  font-size: 50px;
+  margin-top: -150px;
+  margin-left: 810px;
+    color: black;
+}
+
+#day{
+  font-size: 20px;
+  margin-top: -50px;
+  margin-left: 752px;
+}
+
+#month{
+  font-size: 20px;
+  margin-top : -40px;
+  margin-left: 807px;
+}
+
+#date{
+  font-size: 20px;
+  margin-top : -41px;
+  margin-left: 847px;
+}
+
+#author{
+  font-size: 11px;
+  margin-top : 65px;
+  margin-left: 750px;
+  color: black;
+}
+
+#icon{
+  margin-left: 620px;
+  margin-top: -140px;
+  height: 80px;
+  width: 80px;
+  float: left;
+}
