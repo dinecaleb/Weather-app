@@ -4,7 +4,6 @@
   "description": "a weather app which tells your current location",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js",
     "start": "node server.js"
   },
   "repository": {
