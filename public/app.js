@@ -78,7 +78,7 @@ function viewWeather(city){
         $("#city").text(data.name.toUpperCase() + ", " +data.sys.country.toUpperCase());
         $("#temperature").html(Math.round(data.main.temp) + "&#176;c");
         $("#description").html(data.weather[0].main + " , " + data.weather[0].description);
-        $("#icon").attr("src",'https://openweathermap.org/img/w/' + data.weather[0].icon + ".png");
+        $("#icon").attr("src",'http://openweathermap.org/img/w/' + data.weather[0].icon + ".png");
         }
     })
 
