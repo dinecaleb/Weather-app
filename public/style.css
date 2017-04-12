@@ -32,8 +32,8 @@ image: http://www.threepullpa.com/317423-blurred-background-grey.html*/
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 450px;
-  height:180px;
+  width: 550px;
+  height:280px;
   box-shadow:  0 0 20px #000000;
   border-radius: 1%;
 }
@@ -62,7 +62,7 @@ image: http://www.threepullpa.com/317423-blurred-background-grey.html*/
 
 #description{
   font-size: 20px;
-  margin-left: 500px;
+  margin-left: 470px;
 }
 
 #hour{
