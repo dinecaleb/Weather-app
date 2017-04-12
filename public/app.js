@@ -70,7 +70,7 @@ function viewWeather(city){
   console.log(city);
     $.ajax({
 
-      url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + "&APPID=41623a15a0cdc370ddff8399326b1ec7",
+      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + "&APPID=41623a15a0cdc370ddff8399326b1ec7",
       type: "GET",
       dataType: "json",
       success: function(data){
