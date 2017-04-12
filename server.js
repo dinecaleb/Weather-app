@@ -19,4 +19,4 @@ app.get("/", function(req,res){
 
 ///loAD static files
 app.use('/',express.static("./public"));
-app.listen(listen(process.env.PORT || 3000), function(){console.log("Server is running on port 3000");});
+app.listen(process.env.PORT||3000, function(){console.log("Server is running on port 3000");});
