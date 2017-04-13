@@ -32,83 +32,98 @@ image: http://www.threepullpa.com/317423-blurred-background-grey.html*/
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 550px;
-  height:280px;
+  width: 38%;
+  height: 33%;
   box-shadow:  0 0 20px #000000;
   border-radius: 1%;
 }
 
-
+#weather{
+  position: absolute;
+  top: 290px;
+  right: 0;
+  bottom: 0;
+  left: 34%;
+  margin: auto;
+  float: left;
+}
 
 #data-container {
-  margin-top: 33%;
-  margin-left: -20%;
-  float: inherit;
     font-family : sans-serif;
-  text-shadow: 0 0 4px #000000;
+  text-shadow: 0 0 5px #000000;
 }
 
 #city{
   font-size: 20px;
-  margin-left: 480px;
-  margin-bottom: -70px;
+  margin-bottom: -65px;
+
 }
 
 #temperature{
   font-size: 70px;
-  margin-left: 480px;
-    margin-bottom: -12px;
+  margin-bottom: -5px;
+
 }
 
 #description{
   font-size: 20px;
-  margin-left: 470px;
+  float: left;
 }
+
+#icon{
+  height: 80px;
+  width: 80px;
+  margin-left: -40px;
+  margin-top: -80px;
+}
+
+#time{
+  position: absolute;
+  top: 250px;
+  right: 0;
+  bottom: 0;
+  left: 53%;
+  margin: auto;
+}
+
 
 #hour{
   font-size: 50px;
-  margin-top: -150px;
-  margin-left: 730px;
-  float: left;
-    color: black;
+    font-family:  "Andale Mono", monospace;
+    float: left;
 }
+
+
 
 #minute{
   font-size: 50px;
-  margin-top: -150px;
-  margin-left: 810px;
-    color: black;
+    font-family:  "Andale Mono", monospace;
+    margin-bottom: -20px;
 }
 
 #day{
   font-size: 20px;
-  margin-top: -50px;
-  margin-left: 752px;
+  float: left;
+  margin-left: -58px;
 }
 
 #month{
   font-size: 20px;
-  margin-top : -40px;
-  margin-left: 807px;
+float: left;
+margin-left: -15px;
 }
 
 #date{
   font-size: 20px;
-  margin-top : -41px;
-  margin-left: 847px;
+  float: left;
+  margin-left: 5px;
 }
 
 #author{
   font-size: 11px;
-  margin-top : 65px;
-  margin-left: 750px;
   color: black;
-}
-
-#icon{
-  margin-left: 620px;
-  margin-top: -140px;
-  height: 80px;
-  width: 80px;
+  margin-top: 15%;
+  margin-left: 43%;
   float: left;
+  position: absolute;
 }

@@ -12,7 +12,9 @@ $(document).ready(function(){
 
 var lat;
 var lng;
-var key = "AIzaSyD6VqOEVWwJ9U3svYdEhiFtx3Gb-1nqTQ4"
+var googleApiKey = ""
+var openWeatherApiKey = ""
+
 
 //get location using ReverseGeocoding(latitude and longitude) and ajax
 function getLocation(){
@@ -28,11 +30,11 @@ function getLocation(){
                    if(lat && lng){
                      $.ajax({
 
-                       url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat +","+ lng + "&key=" + key,
+                       url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat +","+ lng + "&key=" + googleApiKey,
                        type: "GET",
                        dataType: "json",
                        success: function(data){
-                         city = data.results[0].address_components[4].long_name;
+                         city = data.results[0].address_components[4].short_name;
                          country = data.results[0].address_components[7].short_name;
                     //     console.log(city);
                           viewWeather(city,country);
@@ -64,13 +66,41 @@ function viewWeather(city,country){
   var month = months[d.getMonth()];
 
           $("#day").html(day + ", ");
-          $("#hour").html(hour +":");
-          if(min < 10){
-              $("#minute").html("0" + min);
+
+          console.log(hour);
+
+          if(hour < 12){
+              $("#hour").html(hour +":");
+            if(min < 10){
+                $("#minute").html("0" + min + 'am');
+            }
+            else{
+                $("#minute").html(min + "am");
+            }
           }
+
+          else if(hour-12 == 0){
+            $("#hour").html(hour +":");
+            if(min < 10){
+                $("#minute").html("0" + min + 'pm');
+            }
+            else{
+                $("#minute").html(min + "pm");
+            }
+          }
+
           else{
-              $("#minute").text(min);
+            $("#hour").html(hour-12 +":");
+            if(min < 10){
+                $("#minute").html("0" + min + 'pm');
+            }
+            else{
+                $("#minute").html(min + "pm");
+            }
           }
+
+
+
 
           $("#date").html(date);
           $("#month").text(month);
@@ -78,7 +108,7 @@ function viewWeather(city,country){
   console.log(city);
     $.ajax({
 
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city +"," + "&units=metric" + "&APPID=41623a15a0cdc370ddff8399326b1ec7",
+      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city +","+country + "&units=metric" + "&APPID=" + openWeatherApiKey,
       type: "GET",
       dataType: "json",
       success: function(data){
@@ -88,8 +118,8 @@ function viewWeather(city,country){
             console.log(data.weather[0].description);
             console.log(data.weather[0].icon);
 
-        $("#city").text(city.toUpperCase()+ ", " +country);
-        $("#temperature").html(Math.round(data.main.temp) + "&#176;c");
+        $("#city").text(data.name.toUpperCase()+ ", " +data.sys.country);
+        $("#temperature").html(data.main.temp - (data.main.temp % 1) + "&#176;c");
         $("#description").html(data.weather[0].main + " , " + data.weather[0].description);
         $("#icon").attr("src",'http://openweathermap.org/img/w/' + data.weather[0].icon + ".png");
         }
